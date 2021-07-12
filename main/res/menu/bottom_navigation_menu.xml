@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/spesaButton"
+        android:enabled="true"
+        android:icon="@drawable/outline_fact_check_black_24"
+        android:title="spesa"/>
+    <item
+        android:id="@+id/dispensaButton"
+        android:enabled="true"
+        android:icon="@drawable/outline_shopping_cart_black_24"
+        android:title="dispensa"/>
+</menu>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.trackingmypantry.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_registrationActivity"
+            app:destination="@id/registrationActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_selectionActivity"
+            app:destination="@id/selectionActivity" />
+    </activity>
+    <activity
+        android:id="@+id/selectionActivity"
+        android:name="com.example.trackingmypantry.SelectionActivity"
+        android:label="activity_selection"
+        tools:layout="@layout/activity_selection" >
+        <action
+            android:id="@+id/action_selectionActivity_to_dispensaFragment"
+            app:destination="@id/dispensaFragment" />
+        <action
+            android:id="@+id/action_selectionActivity_to_spesaFragment"
+            app:destination="@id/spesaFragment" />
+    </activity>
+    <activity
+        android:id="@+id/registrationActivity"
+        android:name="com.example.trackingmypantry.RegistrationActivity"
+        android:label="activity_registration"
+        tools:layout="@layout/activity_registration" />
+    <fragment
+        android:id="@+id/spesaFragment"
+        android:name="com.example.trackingmypantry.SpesaFragment"
+        android:label="fragment_spesa"
+        tools:layout="@layout/fragment_spesa" >
+        <action
+            android:id="@+id/action_spesaFragment_to_barcodeActivity"
+            app:destination="@id/barcodeActivity" />
+        <action
+            android:id="@+id/action_spesaFragment_to_newProductFragment"
+            app:destination="@id/newProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dispensaFragment"
+        android:name="com.example.trackingmypantry.DispensaFragment"
+        android:label="fragment_dispensa"
+        tools:layout="@layout/fragment_dispensa" />
+    <fragment
+        android:id="@+id/newProductFragment"
+        android:name="com.example.trackingmypantry.NewProductFragment"
+        android:label="fragment_new_product"
+        tools:layout="@layout/fragment_new_product" />
+    <activity
+        android:id="@+id/barcodeActivity"
+        android:name="com.example.trackingmypantry.BarcodeActivity"
+        android:label="activity_barcode"
+        tools:layout="@layout/activity_barcode" />
+</navigation>
